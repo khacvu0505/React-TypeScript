@@ -29,3 +29,8 @@
   width: 60%;
   margin: 0 auto;
 }
+.toggleTheme {
+  position: fixed !important;
+  right: 3rem;
+  bottom: 3rem;
+}

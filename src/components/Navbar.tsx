@@ -38,7 +38,7 @@ const Navbar = () => {
   const { theme } = useContext(ThemeContext);
 
   // state
-  const [position, setPosition] = useState<string>("Full-Stack Developer");
+  const [position, setPosition] = useState<string>("Front-End Developer");
   const [time, setTime] = useState<Date>(new Date(Date.now()));
 
   // const handleCountryChange = (
@@ -69,7 +69,7 @@ const Navbar = () => {
             py={2}
           >
             <Typography variant="h6" component="div">
-              My movies
+              Mine
             </Typography>
             <Box textAlign="center">
               <WelcomeMessage position={position} />

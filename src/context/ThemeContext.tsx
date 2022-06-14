@@ -5,9 +5,11 @@ interface ThemeContextProps {
 }
 interface ThemeContextDefault {
   theme: PropTypes.Color;
+  toggleTheme: (theme: PropTypes.Color) => void;
 }
 const themeDefaultData = {
   theme: "primary" as PropTypes.Color,
+  toggleTheme: () => {},
 };
 
 export const ThemeContext =
