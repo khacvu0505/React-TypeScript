@@ -69,13 +69,14 @@ const Navbar = () => {
             py={2}
           >
             <Typography variant="h6" component="div">
-              Mine
+              My Movies
             </Typography>
             <Box textAlign="center">
               <WelcomeMessage position={position} />
               <Chip
                 label={`Last time working on this project: ${lastTime} - Status: ${status}`}
                 variant="outlined"
+                className="chipHeader"
               />
               <Box mt={1}>
                 <FormControl fullWidth>
