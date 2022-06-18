@@ -2,6 +2,7 @@ import { Box, Button, Chip, TextField } from "@mui/material";
 import React, { useContext, useState } from "react";
 import { MovieContext } from "../context/MovieContext";
 import { ThemeContext } from "../context/ThemeContext";
+import { OverridableStringUnion } from "@mui/types";
 
 const Movies = () => {
   // state
@@ -13,6 +14,24 @@ const Movies = () => {
 
   // context
   const { theme } = useContext(ThemeContext);
+  const chipTheme = theme as OverridableStringUnion<
+    | "default"
+    | "primary"
+    | "secondary"
+    | "error"
+    | "info"
+    | "success"
+    | "warning"
+  >;
+  const bgButton = theme as OverridableStringUnion<
+    | "inherit"
+    | "primary"
+    | "secondary"
+    | "success"
+    | "error"
+    | "info"
+    | "warning"
+  >;
   const { movies, addMovie, deleteMovie } = useContext(MovieContext);
 
   return (
@@ -27,7 +46,7 @@ const Movies = () => {
         />
         <Button
           variant="contained"
-          color="primary"
+          color={bgButton}
           onClick={() => {
             addMovie(movie);
             setMovie("");
@@ -42,7 +61,7 @@ const Movies = () => {
             key={item.id}
             label={item.title}
             clickable
-            color="primary"
+            color={chipTheme}
             onDelete={deleteMovie.bind(this, item.id)}
             className="movieChip"
           />

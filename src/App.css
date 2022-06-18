@@ -22,3 +22,7 @@
 .movieChip {
   margin-right: 10px !important;
 }
+.btnLogin {
+  background-color: white !important;
+  color: black;
+}
